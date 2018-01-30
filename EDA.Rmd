@@ -1,0 +1,56 @@
+---
+title: "Untitled"
+author: "Lauren Gardiner"
+date: "1/30/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Setup
+
+```{r}
+library(dplyr)
+voice <- read.csv('voice.csv')
+```
+
+# EDA 
+* 3168 observations
+
+```{r}
+sum(is.na(voice))
+```
+
+* No missing values
+
+```{r}
+summary(voice)
+```
+
+* Even split between male and female observations
+
+```{r}
+pairs(voice)
+```
+
+
+```{r}
+library(data.table)
+library(ggplot2)
+ggplot(data = melt(voice), mapping = aes(x = value)) + 
+    geom_histogram(bins = 10) + facet_wrap(~variable, scales = 'free_x')
+```
+
+* Should log `kurt`
+* Should log `skew`
+
+
+In order to reduce multicollinearity while keeping info:
+* Keep `meanfreq`, `mode`, and `sd`, but not `Q25`, `Q75`, `IQR`, `centroid`, and `median`
+* Choose between `skew` and `kurt`
+* Do not use `dfrange` due to correlation with `mindom` and `maxdom`
+* `peakf` is not in the dataset, even though it's in the data dictionary on Kaggle
+
