@@ -5,3 +5,20 @@ This database was created to identify a voice as male or female, based upon acou
 
 ## Data Set Explained
 A dictionary of all variables of the original dataset can be found in Github - Wiki page.
+
+## Getting Started
+
+### Set Up Your Virtual Environment
+
+Create a new virtual environment
+
+```
+virtualenv -p python3 VoicesOfPredictive
+source VoicesOfPredictive/bin/activate
+```
+
+Install requirements
+
+```
+pip install -r requirements.txt
+```
