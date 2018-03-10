@@ -14,7 +14,10 @@ We have run a total of 10 [classification models](https://github.com/pennysun3/V
 XGBoost	
 Boosted Tree, SVM, Random Forest, Neural Network, Logistic Regression, CART, GAM, KNN, Naive Bayes. Note, since there is no built in GAM cross valiadation methods in python, we use R to run the [GAM model](https://github.com/pennysun3/VoiceOfPredictives/blob/master/GAM.md) separately.
 
-Among them, XGBoost performs the best with a cross validation classification accuracy of 96.43%. Since we are making classification between male versus female voices, we believe accruacy is a good metric for evaluation of the results. 
+Since we have 20 predictors, we therefore use PCA to select 6 most important PCA predicators, as an alternative to fit the models. Therefore for each model, we fit a model with 20 origianl predictors, and another model using the 6 important PCA predictors.
+
+## Results and Conclusion
+According to the table below, we can see XGBoost performs the best with a cross validation classification accuracy of 96.43%. Since we are making classification between male versus female voices, we believe accruacy is a good metric for evaluation of the results. 
 
         Method                no PCA       PCA
        XGBoost              0.964320  0.891710
