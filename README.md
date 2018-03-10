@@ -14,16 +14,15 @@ We have run a total of 10 [classification models](https://github.com/pennysun3/V
 Boosted Tree, SVM, Random Forest, Neural Network, Logistic Regression, CART, GAM, KNN, Naive Bayes. Note, since there is no built in GAM cross valiadation methods in python, we use R to run the [GAM model](https://github.com/pennysun3/VoiceOfPredictives/blob/master/GAM.md) separately.
 Among them, XGBoost performs the best with a cross validation classification accuracy of 96.43%. Since we are making classification between male versus female voices, we believe accruacy is a good metric for evaluation of the results. 
 
-       "                       no PCA       PCA\n",
-       "Method                                 \n",
-       "XGBoost              0.964320  0.891710\n",
-       "Boosted Tree         0.962746  0.911283\n",
-       "SVM                  0.962436  0.852897\n",
-       "Random Forest        0.962114  0.962429\n",
-       "Neural Network       0.960216  0.932442\n",
-       "Logistic Regression  0.958644  0.844066\n",
-       "CART                 0.954844  0.932442\n",
-       "GAM                  0.940025  0.927399\n",
-       "KNN                  0.937483  0.902445\n",
+       " Method                no PCA       PCA",
+       "XGBoost              0.964320  0.891710",
+       "Boosted Tree         0.962746  0.911283",
+       "SVM                  0.962436  0.852897",
+       "Random Forest        0.962114  0.962429",
+       "Neural Network       0.960216  0.932442",
+       "Logistic Regression  0.958644  0.844066",
+       "CART                 0.954844  0.932442",
+       "GAM                  0.940025  0.927399",
+       "KNN                  0.937483  0.902445",
        "Naive Bayes          0.928325  0.902445"
  
