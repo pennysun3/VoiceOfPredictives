@@ -5,3 +5,11 @@ This database was created to identify a voice as male or female, based upon acou
 
 ## Data Set Explained
 A dictionary of all variables of the original dataset can be found in Github - [Wiki page](https://github.com/pennysun3/VoiceOfPredictives/wiki).
+
+## Exploratory data analysis
+A brief EDA is done in [EDA] (). Overall, we have a clean, and balanced dataset. No missing values, no imputation needed. 
+
+## Classification Models
+We have run a total of xx [classification modesl](). Among them, XGBoost performs the best with a classification accuracy of %. Since we are making classification between male versus female voices, we believe accruacy is a good metric for evaluation of the results.
+
+
